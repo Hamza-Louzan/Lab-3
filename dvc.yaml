@@ -1,0 +1,12 @@
+stages:
+  preprocess:
+    cmd: cd src && python preprocessing.py
+    deps:
+      - src/preprocessing.py
+      - data/customer_churn_dataset-training-master.csv
+      - data/customer_churn_dataset-testing-master.csv
+    outs:
+      - data/processed/X_train.csv
+      - data/processed/y_train.csv
+      - data/processed/X_test.csv
+      - data/processed/y_test.csv
